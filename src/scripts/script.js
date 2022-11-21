@@ -12,3 +12,16 @@ function increase() {
         minute.innerText = parseInt(minute.innerText) + 1;
     }
 }
+
+function decrease() {
+    if(second.innerText <= 0 && minute.innerText <= 0)
+        return;
+
+    else if (minute.innerText > 0 && second.innerText <= 0) {
+        minute.innerText = parseInt(minute.innerText) - 1;
+        second.innerText = 60;
+    }
+
+    else
+        second.innerText = parseInt(second.innerText) - 10;
+}
